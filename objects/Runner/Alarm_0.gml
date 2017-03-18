@@ -1,0 +1,3 @@
+///Variable Jump
+jumping = false;
+
