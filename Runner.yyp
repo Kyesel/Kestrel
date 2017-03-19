@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "48d03d96-e0f5-4320-824e-ccf913cc2184",
+            "Value": {
+                "id": "3c1ec886-71a1-43fc-a9cf-5e96e52bfddd",
+                "resourcePath": "sprites\\Floor_Red_SPRITE\\Floor_Red_SPRITE.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "538874dd-c5c7-45c5-a0ea-4fe903d30acb",
             "Value": {
                 "id": "cc0b2b0c-b5d1-45bc-a54e-9b28573c6597",
@@ -143,6 +151,14 @@
             }
         },
         {
+            "Key": "974c02ca-b260-4392-9426-1fe495370158",
+            "Value": {
+                "id": "1d2da201-ec21-4eef-a605-b3fe8ebfd37d",
+                "resourcePath": "sprites\\Floor_Blue_SPRITE\\Floor_Blue_SPRITE.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9a8917ec-d324-43b9-aa68-a11f78cbe2df",
             "Value": {
                 "id": "b4649fa7-9748-495a-81a4-d488a9ddcd89",
@@ -159,11 +175,27 @@
             }
         },
         {
+            "Key": "9dfd8977-c08e-4e4a-8257-6bdb271b06ad",
+            "Value": {
+                "id": "8b46a0b1-8d73-42ac-9a69-9a6c46c8ad9c",
+                "resourcePath": "objects\\Floor_Blue\\Floor_Blue.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "d92779b3-de37-434e-8d63-0e40045678ba",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "bb84db47-59bf-4536-8601-57500c68d852",
+            "Value": {
+                "id": "2cd83943-c5a2-4bec-a8fa-1a231afe4378",
+                "resourcePath": "objects\\Floor_Red\\Floor_Red.yy",
+                "resourceType": "GMObject"
             }
         },
         {

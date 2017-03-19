@@ -58,8 +58,13 @@ if(place_meeting(x, y + vsp, Floor))
     vsp = 0;
 }
 
-//Horizontal collision with floor
-if(place_meeting(x + moveSpeed, y, Floor))
+//Die on contact with floor from the side
+if(place_meeting(x,y,Floor))
+{
+	room_restart();
+}
+//Stop on contact with floor from the side OFF
+/*if(place_meeting(x + moveSpeed, y, Floor))
 {
 	hsp = 1
 	while(!place_meeting(x + sign(hsp), y, Floor))
@@ -71,5 +76,5 @@ if(place_meeting(x + moveSpeed, y, Floor))
 else if(!place_meeting(x + moveSpeed, y, Floor))
 {
 	hsp = moveSpeed
-}
+}*/
 

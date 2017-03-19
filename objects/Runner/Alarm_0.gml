@@ -1,3 +1,3 @@
-///Variable Jump
+/// @description Variable Jump
 jumping = false;
 
