@@ -11,15 +11,27 @@ if(place_meeting(x, y+1, Floor))
     if(keyUp == true)
     {
         jumping = true;
-        alarm[0] = 10;
+        alarm[0] = 20;
     }
 }
-if(jumping = true)
+if(jumping == true)
 {
     if(keyboard_check(vk_up))
     {
-        vsp = -jumpSpeed;
+		if(!place_meeting(x, y + vsp - 5, Floor))
+		{
+			vsp = -jumpSpeed;
+		}
+		else
+		{
+			jumping = false;
+		}
+		
     }
+	else
+	{
+		jumping = false;
+	}
 }
 
 
@@ -37,15 +49,22 @@ if(vsp < terminalVelocity)
 //Vertical collision with floor
 if(place_meeting(x, y + vsp, Floor))
 {
-    /*while(!place_meeting(x, y+sign(vsp), Floor))
+	
+    while(!place_meeting(x, y+sign(vsp), Floor))
     {
         y += sign(vsp);
-    }*/
+    }
+	
     vsp = 0;
 }
+
 //Horizontal collision with floor
 if(place_meeting(x + moveSpeed, y, Floor))
 {
+	/*while(!place_meeting(x + sign(hsp) + 5, y, Floor))
+    {
+        x += sign(hsp);
+    }*/
 	hsp = 0
 }
 else if(!place_meeting(x + moveSpeed, y, Floor))

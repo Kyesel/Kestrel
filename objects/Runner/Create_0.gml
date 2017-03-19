@@ -1,10 +1,10 @@
 ///Initialize
 jumping = false;
 jumpSpeed = 15;
-moveSpeed = 4;
+moveSpeed = 10;
 hsp = moveSpeed;
-grav = 1;
-terminalVelocity = 12;
+grav = 2;
+terminalVelocity = 20;
 vsp = 0;
 image_speed = 0;
 
