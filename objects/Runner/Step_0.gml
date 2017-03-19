@@ -61,14 +61,15 @@ if(place_meeting(x, y + vsp, Floor))
 //Horizontal collision with floor
 if(place_meeting(x + moveSpeed, y, Floor))
 {
-	/*while(!place_meeting(x + sign(hsp) + 5, y, Floor))
+	hsp = 1
+	while(!place_meeting(x + sign(hsp), y, Floor))
     {
         x += sign(hsp);
-    }*/
+    }
 	hsp = 0
 }
 else if(!place_meeting(x + moveSpeed, y, Floor))
 {
-hsp = moveSpeed
+	hsp = moveSpeed
 }
 
