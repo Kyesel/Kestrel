@@ -78,3 +78,31 @@ else if(!place_meeting(x + moveSpeed, y, Floor))
 	hsp = moveSpeed
 }*/
 
+///Changing states
+
+if(crouching == true)
+{
+	if(currentColor == "")
+	{
+		image_index = 3;
+	} else if(currentColor == "blue")
+	{
+		image_index = 4;
+	} else if(currentColor == "red")
+	{
+	image_index = 5;
+	}
+} else if(crouching == false)
+{
+	if(currentColor == "")
+	{
+		image_index = 0;
+	} else if(currentColor == "blue")
+	{
+		image_index = 1;
+	} else if(currentColor == "red")
+	{
+	image_index = 2;
+	}
+}
+

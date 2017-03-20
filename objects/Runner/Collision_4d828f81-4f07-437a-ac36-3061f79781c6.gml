@@ -1,5 +1,5 @@
 /// @description When colliding with the red floor
-if(!(currentColor == "red"))
+if(!(currentColor == "blue"))
 {
 	room_restart();
 }

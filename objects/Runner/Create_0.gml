@@ -2,6 +2,7 @@
 colorChangeable = true;
 currentColor = "";
 jumping = false;
+crouching = false;
 jumpSpeed = 20;
 moveSpeed = 8;
 hsp = moveSpeed;
