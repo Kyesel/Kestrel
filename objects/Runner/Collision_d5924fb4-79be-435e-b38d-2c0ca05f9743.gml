@@ -1,5 +1,9 @@
 /// @description When colliding with the blue floor
-if(!(currentColor == "red"))
+if(currentColor == "red")
 {
-	room_restart();
+	alarm[1] = 5
+}
+else
+{
+	room_restart()
 }
