@@ -11,7 +11,7 @@ if(place_meeting(x, y+1, Floor))
     if(keyUp == true)
     {
         jumping = true;
-        alarm[0] = 20;
+        alarm[0] = 10;
     }
 }
 if(jumping == true)
