@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "b4b119b6-692a-4ae8-bad7-94c4784a176f",
+            "Value": {
+                "id": "85df5635-1931-420f-b12e-79aa4d911271",
+                "resourcePath": "objects\\Floor_WallJump\\Floor_WallJump.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bb84db47-59bf-4536-8601-57500c68d852",
             "Value": {
                 "id": "2cd83943-c5a2-4bec-a8fa-1a231afe4378",
@@ -268,6 +276,14 @@
                 "id": "aaead180-8d99-4431-8cd2-15a1cc9d572c",
                 "resourcePath": "views\\eacc8cf6-ec03-461e-8f59-0be2594c249c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f0cf2b75-2656-4082-a845-abe92508796f",
+            "Value": {
+                "id": "3c3adf34-cef6-4011-9776-4a183aa62bb4",
+                "resourcePath": "sprites\\Floor_Walljump_SPRITE\\Floor_Walljump_SPRITE.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

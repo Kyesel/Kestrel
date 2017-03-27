@@ -4,6 +4,15 @@ keyDown = keyboard_check(vk_down);
 keyRight = keyboard_check(vk_right);
 keyLeft = keyboard_check(vk_left);
 
+///Check to see if player is in air
+if(!(place_meeting(x, y + 10, Floor)))
+{
+	inAir = true;
+} 
+else
+{
+	inAir = false;
+}
 
 ///Jump
 if(place_meeting(x, y+1, Floor))
@@ -35,6 +44,8 @@ if(jumping == true)
 }
 
 
+
+
 ///Move
 x += hsp;
 y += vsp;
@@ -63,21 +74,23 @@ if(place_meeting(x,y,Floor))
 {
 	room_restart();
 }
-//Stop on contact with floor from the side OFF
-/*if(place_meeting(x + moveSpeed, y, Floor))
+//Stop on contact with walljump floor from the side 
+if(inAir == true)
 {
-	hsp = 1
-	while(!place_meeting(x + sign(hsp), y, Floor))
-    {
-        x += sign(hsp);
-    }
-	hsp = 0
+	if(place_meeting(x + moveSpeed + (10 * sign(moveSpeed)), y, Floor_WallJump))
+	{
+		hsp = 1
+		while(!place_meeting(x + sign(hsp), y, Floor_WallJump))
+		{
+			x += sign(hsp);
+		}
+		hsp = 0
+	}
 }
-else if(!place_meeting(x + moveSpeed, y, Floor))
+else if(place_meeting(x + moveSpeed, y, Floor_WallJump))
 {
 	hsp = moveSpeed
-}*/
-
+}
 ///Changing states
 
 if(crouching == true)
