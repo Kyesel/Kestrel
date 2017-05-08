@@ -1,3 +1,4 @@
+/// @description Player input and movement
 ///Get Player Input
 keyUp = keyboard_check_pressed(vk_up);
 keyDown = keyboard_check(vk_down);
@@ -46,9 +47,7 @@ if(jumping == true)
 
 
 
-///Move
-x += hsp;
-y += vsp;
+
 
 ///Gravity
 if(vsp < terminalVelocity)
@@ -57,6 +56,18 @@ if(vsp < terminalVelocity)
 }
 
 ///Collision
+//Horizontal collision with floor
+if(place_meeting(x + moveSpeed,y ,Floor))
+{	
+	hsp = 0
+}
+else
+{
+	hsp = moveSpeed
+}
+//Move Horizontally
+x += hsp;
+
 //Vertical collision with floor
 if(place_meeting(x, y + vsp, Floor))
 {
@@ -68,31 +79,10 @@ if(place_meeting(x, y + vsp, Floor))
 	
     vsp = 0;
 }
+//Move Vertically
+y += vsp;
 
-//Die on contact with floor from the side
-if(place_meeting(x,y,Floor))
-{
-	room_restart();
-}
-//Stop on contact with walljump floor from the side 
-if(inAir == true)
-{
-	if(place_meeting(x + moveSpeed + (10 * sign(moveSpeed)), y, Floor_WallJump))
-	{
-		hsp = 1
-		while(!place_meeting(x + sign(hsp), y, Floor_WallJump))
-		{
-			x += sign(hsp);
-		}
-		hsp = 0
-	}
-}
-else if(place_meeting(x + moveSpeed, y, Floor_WallJump))
-{
-	hsp = moveSpeed
-}
 ///Changing states
-
 if(crouching == true)
 {
 	if(currentColor == "")
@@ -119,3 +109,19 @@ if(crouching == true)
 	}
 }
 
+///Reversal tiles
+if(place_meeting(x, y, Floor_Reverse))
+{
+	hsp *= -1;
+	moveSpeed *= -1;
+	if(sign(vsp) == 1)
+	{
+	vsp += -30;
+	}
+}
+
+//Die on contact with wall from the side
+if(place_meeting(x,y,Floor_Wall))
+{
+	room_restart();
+}
