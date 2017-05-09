@@ -59,11 +59,15 @@ if(vsp < terminalVelocity)
 //Horizontal collision with floor
 if(place_meeting(x + moveSpeed,y ,Floor))
 {	
-	hsp = 0
+	while(!place_meeting(x+sign(moveSpeed),y, Floor))
+	{
+		x += sign(hsp);
+	}
+	hsp = 0;
 }
 else
 {
-	hsp = moveSpeed
+	hsp = moveSpeed;
 }
 //Move Horizontally
 x += hsp;
